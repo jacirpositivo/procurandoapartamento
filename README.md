@@ -24,8 +24,14 @@ O resultado deve ser QUADRA 2, pois na quadra 2 tem apartamento disponível, tem
 
 ## O que entregar:
 1.	Algoritmo de resolução:
-    - Qual seria o resultado caso as entradas sejam
-        - ['ESCOLA', 'ACADEMIA']
-        - ['ESCOLA', 'MERCADO', 'ACADEMIA']
+    - A entrada de dados será um Array de String, e o return do Método será uma String. Ex: "Quadra 5";
+    - Qual seria o resultado caso as entradas sejam:
+        - ['ESCOLA', 'ACADEMIA'];
+        - ['ESCOLA', 'MERCADO', 'ACADEMIA'];
     
-2.	Definição dos testes unitários que serão utilizados;
+2.	Criar testes unitários baseado nos exemplos passados;
+
+## Instruções Gerais
+- Você deverá fazer o fork desse projeto, resolvê-lo e subi-lo em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor - Positivo";
+- Os acessos devem ser dados para os usuários 'jacirpositivo' e 'ctomasini' apenas;
+- O README.md deverá ser o seu curriculo, com a adequada formatação.
