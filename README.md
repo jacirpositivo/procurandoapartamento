@@ -38,7 +38,12 @@ Considerando os testes abaixo, os resultados seriam os seguintes:
 
 
 ## Instruções Gerais
-- Você deverá fazer o fork desse projeto, resolvê-lo e subi-lo em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor - Positivo";
+- Você deverá fazer:
+ - Fork desse projeto em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor-Positivo";
+    - ![image](https://user-images.githubusercontent.com/90634328/187271331-e6582814-f28b-47d8-a940-f39d76a1f62d.png)
+    -![image](https://user-images.githubusercontent.com/90634328/187272263-00e338ce-eb0c-474f-ab72-6c730060df56.png)
+
+- Resolvê-lo e subir ao seu repositório Privado
 - Os acessos devem ser dados para os usuários 'jacirpositivo' e 'ctomasini' apenas;
 - O README.md deverá ser o seu curriculo, com a adequada formatação.
 
