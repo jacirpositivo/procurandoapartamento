@@ -1,5 +1,5 @@
-# procurandoapartamento
-Projeto Procurando Apartamento
+#Projeto Procurando Apartamento
+
 Você provê um serviço por web de busca de apartamentos para locatários. Neste serviço, neste lugar específico da cidade mostrado no mapa abaixo, estão disponíveis diversos apartamentos em cada uma das quadras. As quadras, além de conter os apartamentos, mostram onde a rua começa e onde termina já que a quadra 1 é o início da rua e quadra (n) é mais próximo a seu final. O mapa não determina, porém, o sentido de pedestres e carros já que é mão dupla. É disponibilizada para esse serviço uma tabela da relação de serviços disponíveis em cada uma das quadras: academia, escola e mercado. Os locatários são pessoas muito ocupadas e trabalham remotamente. Assim, é muito importante que eles morem em um lugar com menor deslocamento possível. O serviço deve, com base na indicação do locatário em necessidades de serviços, buscar um apartamento dentro da quadra que proporcione menor deslocamento para seu dia a dia. 
 
 ![image](https://user-images.githubusercontent.com/112395489/187196886-8818cda2-395c-4968-8831-645211fb303b.png)
