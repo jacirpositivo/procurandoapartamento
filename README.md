@@ -41,3 +41,7 @@ Considerando os testes abaixo, os resultados seriam os seguintes:
 - Você deverá fazer o fork desse projeto, resolvê-lo e subi-lo em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor - Positivo";
 - Os acessos devem ser dados para os usuários 'jacirpositivo' e 'ctomasini' apenas;
 - O README.md deverá ser o seu curriculo, com a adequada formatação.
+
+## Requisitos de software para executar o projeto
+- net6.0 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+- Visual Studio 2022 (https://visualstudio.microsoft.com/pt-br/vs/) ou Visual Studio Code (https://code.visualstudio.com/)
