@@ -25,13 +25,17 @@ Considerando os testes abaixo, os resultados seriam os seguintes:
     - O resultado deve ser QUADRA 2, pois na quadra 2 tem apartamento disponível, tem academia e está mais próximo do final da rua;
 
 ## O que entregar:
-1.	Algoritmo de resolução:
+1.	Algoritmo de resolução (Novo método no Controller Apartamento) Exemplo a seguir:
+![image](https://user-images.githubusercontent.com/90634328/187257056-3d55d9e0-11c2-416e-9c07-2eba82665fcf.png)
+
     - A entrada de dados será um Array de String, e o return do Método será uma String. Ex: "Quadra 5";
     - Qual seria o resultado caso as entradas sejam:
         - ['ESCOLA', 'ACADEMIA'];
         - ['ESCOLA', 'MERCADO', 'ACADEMIA'];
     
 2.	Criar testes unitários baseado nos exemplos passados;
+![image](https://user-images.githubusercontent.com/90634328/187255894-6ff4700d-0e97-4435-af29-a615925c6d20.png)
+
 
 ## Instruções Gerais
 - Você deverá fazer o fork desse projeto, resolvê-lo e subi-lo em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor - Positivo";
