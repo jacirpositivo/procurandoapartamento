@@ -50,3 +50,17 @@ Considerando os testes abaixo, os resultados seriam os seguintes:
 ## Requisitos de software para executar o projeto
 - net6.0 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 - Visual Studio 2022 (https://visualstudio.microsoft.com/pt-br/vs/) ou Visual Studio Code (https://code.visualstudio.com/)
+
+## Comandos
+```{.cs}
+dotnet restore ProcurandoApartamento.sln
+```
+```{.cs}
+dotnet build ProcurandoApartamento.sln
+```
+```{.cs}
+dotnet watch run --project src\ProcurandoApartamento\ProcurandoApartamento.csproj
+```
+```{.cs}
+dotnet test test\ProcurandoApartamento.Test\ProcurandoApartamento.Test.csproj
+```
