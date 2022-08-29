@@ -16,11 +16,13 @@ A escolha do apartamento vai depender de:
 
 ## Exemplos:
 
-Considerando os testes abaixo, os resultados seriam os seguintes: ['ACADEMIA', 'MERCADO'] 
-O resultado deve ser QUADRA 1, pois na quadra 1 tem apartamento disponível e os dois estabelecimentos de seu interesse;
+Considerando os testes abaixo, os resultados seriam os seguintes: 
 
-Considerando os testes abaixo, os resultados seriam os seguintes: ['ACADEMIA'] 
-O resultado deve ser QUADRA 2, pois na quadra 2 tem apartamento disponível, tem academia e está mais próximo do final da rua;
+- ['ACADEMIA', 'MERCADO'] 
+    - O resultado deve ser QUADRA 1, pois na quadra 1 tem apartamento disponível e os dois estabelecimentos de seu interesse;
+
+- ['ACADEMIA'] 
+    - O resultado deve ser QUADRA 2, pois na quadra 2 tem apartamento disponível, tem academia e está mais próximo do final da rua;
 
 ## O que entregar:
 1.	Algoritmo de resolução:
