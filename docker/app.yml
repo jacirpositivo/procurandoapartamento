@@ -1,0 +1,8 @@
+version: "2.2"
+services:
+  procurandoapartamento-app:
+    build:
+      context: ../
+      dockerfile: Dockerfile-Back
+    ports:
+      - 8080:80

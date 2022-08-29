@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  procurandoapartamento-sonar:
+    image: sonarqube:9.3.0-community
+    ports:
+      - 9001:9000
+      - 9092:9092
