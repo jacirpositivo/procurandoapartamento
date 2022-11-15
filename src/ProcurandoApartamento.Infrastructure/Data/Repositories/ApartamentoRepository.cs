@@ -17,5 +17,15 @@ namespace ProcurandoApartamento.Infrastructure.Data.Repositories
         {
         }
 
+        public async Task<IEnumerable<Apartamento>> SearchBetterApartment(List<string> parameters)
+        {
+            var list = await _context.Set<Apartamento>()
+                                     .Where(p => parameters.Contains(p.Estabelecimento) &&
+                                            p.EstabelecimentoExiste)
+                                     .OrderBy(p => p.Quadra)
+                                     .ToListAsync();
+
+            return list;
+        }
     }
 }
