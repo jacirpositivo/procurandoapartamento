@@ -242,7 +242,7 @@ namespace ProcurandoApartamento.Test.Controllers
             HttpResponseMessage response = await _client.PostAsync("/api/apartamentos/melhor-apartamento", TestUtil.ToJsonContent(apartmentNamesFilter));
 
             string result = await response.Content.ReadAsStringAsync();
-            Assert.Equal("QUADRA 5", result);
+            Assert.Equal("QUADRA 4", result);
         }
     }
 }

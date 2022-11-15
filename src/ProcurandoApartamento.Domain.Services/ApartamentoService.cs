@@ -4,6 +4,7 @@ using ProcurandoApartamento.Domain.Services.Interfaces;
 using ProcurandoApartamento.Domain.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using LanguageExt;
 
 namespace ProcurandoApartamento.Domain.Services
 {
@@ -62,23 +63,43 @@ namespace ProcurandoApartamento.Domain.Services
                 return $@"QUADRA {itemsToReturn.Select(p => p.Quadra).LastOrDefault()}";
             }
 
-            string stringToResult = string.Empty;
-            int lastQuarter = 0;
+            //another approach (get all apartments for first match quantity with result or last match with first param)
+            int countParams = parameters.Count;
+            string resultNotify = string.Empty;
 
-            foreach (string currentApartment in parameters)
+            while (countParams > 0)
             {
-                List<Apartamento> apartments = list.Where(p => p.Estabelecimento == currentApartment).ToList();
-                int _currentQuarter = 0;
+                countParams--;
+                parameters.RemoveAt(countParams);
 
-                if (apartments.Count >= 1)
+                list = await _apartamentoRepository.SearchBetterApartment(parameters);
+
+                groupList = list.GroupBy(p => new { p.Quadra }, (key, group) => new
                 {
-                    _currentQuarter = apartments.Select(p => p.Quadra).LastOrDefault();
+                    key.Quadra,
+                    Result = group.ToList()
+                });
+
+                itemsToReturn = groupList.Where(p => p.Result.Count == parameters.Count);
+
+                if (itemsToReturn.Count() == 1)
+                {
+                    countParams = 0;
+                    resultNotify = $@"QUADRA {itemsToReturn.Select(p => p.Quadra).FirstOrDefault()}";
                 }
 
-                lastQuarter = _currentQuarter >= lastQuarter ? _currentQuarter : lastQuarter;
+                if (itemsToReturn.Count() > 1 && parameters.Count > 1)
+                {
+                    countParams = 0;
+                    resultNotify = $@"QUADRA {itemsToReturn.Select(p => p.Quadra).FirstOrDefault()}";
+                } else if (itemsToReturn.Count() > 1)
+                {
+                    countParams = 0;
+                    resultNotify = $@"QUADRA {itemsToReturn.Select(p => p.Quadra).LastOrDefault()}";
+                }
             }
 
-            return lastQuarter > 0 ? stringToResult += $@"QUADRA {lastQuarter}" : "NENHUMA SUGESTAO DISPONIVEL";
+            return !string.IsNullOrWhiteSpace(resultNotify) ? resultNotify : "NENHUMA SUGESTAO DISPONIVEL" ;
         }
     }
 }
