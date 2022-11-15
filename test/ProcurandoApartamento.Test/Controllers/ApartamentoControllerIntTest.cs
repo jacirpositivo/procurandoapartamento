@@ -11,6 +11,7 @@ using ProcurandoApartamento.Test.Setup;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Xunit;
+using System.Collections.Generic;
 
 namespace ProcurandoApartamento.Test.Controllers
 {
@@ -220,6 +221,28 @@ namespace ProcurandoApartamento.Test.Controllers
             apartamento1.Should().NotBe(apartamento2);
             apartamento1.Id = 0;
             apartamento1.Should().NotBe(apartamento2);
+        }
+
+        [Fact]
+        public async Task SearchBetterApartmentFirstCase()
+        {
+            var apartmentNamesFilter = new List<string> { "ESCOLA", "ACADEMIA" };
+
+            HttpResponseMessage response = await _client.PostAsync("/api/apartamentos/melhor-apartamento", TestUtil.ToJsonContent(apartmentNamesFilter));
+
+            string result = await response.Content.ReadAsStringAsync();
+            Assert.Equal("QUADRA 4", result);
+        }
+
+        [Fact]
+        public async Task SearchBetterApartmentSecondCase()
+        {
+            var apartmentNamesFilter = new List<string> { "ESCOLA", "MERCADO", "ACADEMIA" };
+
+            HttpResponseMessage response = await _client.PostAsync("/api/apartamentos/melhor-apartamento", TestUtil.ToJsonContent(apartmentNamesFilter));
+
+            string result = await response.Content.ReadAsStringAsync();
+            Assert.Equal("QUADRA 5", result);
         }
     }
 }
