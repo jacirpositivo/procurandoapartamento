@@ -44,7 +44,7 @@ Considerando os testes abaixo, os resultados seriam os seguintes:
     -![image](https://user-images.githubusercontent.com/90634328/187272263-00e338ce-eb0c-474f-ab72-6c730060df56.png)
 
 - Resolvê-lo e subir ao seu repositório Privado
-- Os acessos devem ser dados para os usuários 'jacirpositivo' e 'ctomasini' apenas;
+- Os acessos devem ser dados para o usuário 'ctomasini' apenas;
 - O README.md deverá ser o seu curriculo, com a adequada formatação.
 
 ## Requisitos de software para executar o projeto
